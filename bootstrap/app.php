@@ -36,7 +36,8 @@
     };
 
     $container['db'] = function(){
-        return new PDO('mysql:host=localhost;dbname=esportsethiopia','root','');
+        // return new PDO('mysql:host=localhost;dbname=esportsetiopia','root','');
+        return new PDO('mysql:host=localhost;dbname=esportse_esports','esportse_esports','Peter@619');
     };
 
     $container['flash'] = function(){

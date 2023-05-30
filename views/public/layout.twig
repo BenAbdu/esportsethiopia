@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{{ base_url() }}/assets/main.css">
+        <title>Esports Ethiopia - Powering Ethiopia's Esports Revolution</title>
+    </head>
+    <body>
+
+        <section class="showcase">
+            <header>
+                <h2 class="logo"><a href="{{ path_for('landing') }}"><img src="{{ base_url() }}/assets/cross-light.png" class="img-fluid" style="width: 100px;"></a></h2>
+                <div class="toggle"></div>
+            </header>
+            <video src="{{ base_url() }}/assets/bg.mp4" muted loop autoplay></video>
+            {% block content %}{% endblock %}
+        </section>
+        <div class="menu">
+            <ul>
+                <li class="mt-2"><a href="{{ path_for('landing') }}">Home</a></li>
+                <li class="mt-2"><a href="{{ path_for('register') }}">register</a></li>
+                <li class="mt-2"><a href="{{ path_for('ourTeam') }}">Our Team</a></li>
+                <li class="mt-2"><a href="#">Contact</a></li>
+                <li class="mt-2"><a href="#">Disclaimer</a></li>
+            </ul>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+        <script>
+            const menuToggle = document.querySelector('.toggle');
+            const showcase = document.querySelector('.showcase');
+
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                showcase.classList.toggle('active');
+            })
+        </script>
+    
+    </body>
+</html>

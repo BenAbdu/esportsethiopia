@@ -23,6 +23,15 @@
             return $sessionID;
         }
 
+
+        public function updatePaid($sessionID,$channel){
+
+            $sql = "UPDATE `registerations` SET `channel`=\"$channel\", `status`=\"paid\" WHERE `sessionID`=\"$sessionID\"  ";
+            $this->db->query($sql);
+
+        }
+
+
     }
 
 ?>
